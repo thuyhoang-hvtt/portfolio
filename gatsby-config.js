@@ -19,7 +19,7 @@ module.exports = {
         name: 'Thuy Hoang',
         short_name: '0xShikYe',
         start_url: '/',
-        icon: 'src/images/logo@24px.png',
+        icon: 'src/images/logo@512px.png',
       },
     },
     {
