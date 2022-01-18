@@ -2,10 +2,12 @@ import { transparentize } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 import transitions from './transitions';
 import variables from './variables';
+import fonts from './fonts';
 
 export default createGlobalStyle`
   ${variables}
   ${transitions}
+  ${fonts}
 
   html {
     box-sizing: border-box;
