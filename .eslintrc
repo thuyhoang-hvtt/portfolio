@@ -51,7 +51,8 @@
         "namedComponents": "function-declaration"
       }
     ],
-    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }]
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+    "no-restricted-syntax": ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator='in']"]
   },
   "overrides": [
     {
