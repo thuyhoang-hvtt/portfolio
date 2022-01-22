@@ -171,6 +171,10 @@ export default createGlobalStyle`
     font-weight: 600;
     color: ${(props) => transparentize(0.2, props.theme.palette.onSurface)};
     line-height: 1.1;
+
+    &.highlight {
+      color: ${(props) => props.theme.palette.primary};
+    }
   }
 
   img,
@@ -192,7 +196,7 @@ export default createGlobalStyle`
     fill: currentColor;
     vertical-align: middle;
 
-    &.feather {
+    &.icon {
       fill: none;
     }
   }
@@ -383,13 +387,18 @@ export default createGlobalStyle`
 
   .heading {
     margin: 0;
+    font-size: clamp(24px, 3vw, 60px);
 
     &.heading-lg {
-      font-size: clamp(40px, 8vw, 80px);
+      font-size: clamp(36px, 6vw, 96px);
     }
 
-    .heading-md {
-      font-size: clamp(40px, 8vw, 60px);
+    &.heading-md {
+      font-size: clamp(28px, 4vw, 60px);
+    }
+
+    &.highlight {
+      color: ${(props) => props.theme.palette.primary};
     }
   }
 
