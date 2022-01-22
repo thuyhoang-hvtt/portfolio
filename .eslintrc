@@ -21,6 +21,7 @@
   "rules": {
     "prettier/prettier": "error",
     "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
     "react/prop-types": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
