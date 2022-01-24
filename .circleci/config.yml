@@ -8,6 +8,11 @@ executors:
   base-executor:
     docker:
       - image: "cimg/base:stable"
+    working_directory: '.'
+
+jobs:
+  build:
+    executor: base-executor
     steps:
       - checkout
       - node/install:
@@ -18,14 +23,6 @@ executors:
           name: Install dependencies
           command: yarn
 
-jobs:
-  build:
-    executor: base-executor
-    steps:
-      - checkout
-      - run:
-          name: Gatsby build
-          command: yarn build
   lint:
     executor: base-executor
     steps:
