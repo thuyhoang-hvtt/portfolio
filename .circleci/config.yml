@@ -8,7 +8,7 @@ executors:
   base-executor:
     docker:
       - image: "cimg/base:stable"
-    working_directory: './app'
+    working_directory: '~/app'
 
 jobs:
   build:
