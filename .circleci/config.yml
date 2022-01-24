@@ -4,25 +4,35 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.0
 
-jobs:
-  build:
+executors:
+  base-executor:
     docker:
-      - image: 'cimg/base:stable'
+      - image: "cimg/base:stable"
     steps:
       - checkout
       - node/install:
           install-yarn: true
-          node-version: '16.13.1'
+          node-version: "16.13.1"
       - run: yarn --version
       - run:
-        - name: Install dependencies
-        - command: yarn
-  lint:
-    steps:
-      - run:
-        - name: Lint
-        - command: yarn lint
+          name: Install dependencies
+          command: yarn
 
+jobs:
+  build:
+    executor: base-executor
+    steps:
+      - checkout
+      - run:
+          name: Gatsby build
+          command: yarn build
+  lint:
+    executor: base-executor
+    steps:
+      - checkout
+      - run:
+          name: Lint
+          command: yarn lint
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -31,5 +41,5 @@ workflows:
     jobs:
       - build
       - lint:
-        requires:
-          - build # only deploy once build job has completed
+          requires:
+            - build # only deploy once build job has completed
