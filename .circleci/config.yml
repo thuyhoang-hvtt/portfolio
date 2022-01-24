@@ -22,11 +22,22 @@ jobs:
       - run:
           name: Install dependencies
           command: yarn
+      - run:
+          name: Gatsby build
+          command: yarn build
+
 
   lint:
     executor: base-executor
     steps:
       - checkout
+      - node/install:
+          install-yarn: true
+          node-version: "16.13.1"
+      - run: yarn --version
+      - run:
+          name: Install dependencies
+          command: yarn
       - run:
           name: Lint
           command: yarn lint
