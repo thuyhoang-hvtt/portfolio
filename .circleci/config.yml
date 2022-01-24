@@ -1,0 +1,35 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.0
+
+jobs:
+  build:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+          node-version: '16.13.1'
+      - run: yarn --version
+      - run:
+        - name: Install dependencies
+        - command: yarn
+  lint:
+    steps:
+      - run:
+        - name: Lint
+        - command: yarn lint
+
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  build_and_lint: # Name of workflow
+    jobs:
+      - build
+      - lint:
+        requires:
+          - build # only deploy once build job has completed
