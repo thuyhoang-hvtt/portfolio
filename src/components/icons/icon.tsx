@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  IconZeroX,
   IconAppStore,
   IconBookmark,
   IconCodepen,
@@ -12,6 +13,7 @@ import {
   IconPlayStore,
   IconStar,
   IconTwitter,
+  IconLogo,
 } from '@/components/icons';
 
 interface IProps {
@@ -22,6 +24,8 @@ function Icon(props: IProps) {
   const { name } = props;
 
   switch (name) {
+    case '0x':
+      return <IconZeroX />;
     case 'AppStore':
       return <IconAppStore />;
     case 'Bookmark':
@@ -46,6 +50,8 @@ function Icon(props: IProps) {
       return <IconStar />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Logo':
+      return <IconLogo />;
     default:
       return <IconExternal />;
   }

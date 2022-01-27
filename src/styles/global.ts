@@ -115,6 +115,10 @@ export default createGlobalStyle`
     grid-template-columns: 100%;
   }
 
+  #logo {
+    color: ${(props) => props.theme.palette.secondary};
+  }
+
   main {
     margin: 0 auto;
     width: 100%;
