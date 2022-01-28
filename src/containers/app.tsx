@@ -4,6 +4,7 @@ import { ThemeContextProvider } from '@/contexts';
 import { navigateToSection, targetExternalLinkToNewPage } from '@/utils';
 import ConditionalRenderer from '@/components/conditional-renderer';
 import AnimatedLoader from '@/components/animated-loader';
+import Head from '@/components/head';
 
 function App({ location, children }) {
   const isHome = useMemo(() => location.pathname === '/', []);
@@ -23,15 +24,20 @@ function App({ location, children }) {
   }, []);
 
   return (
-    <ThemeContextProvider>
-      <GlobalTheme>
-        <ConditionalRenderer
-          condition={isLoading}
-          caseTrue={<AnimatedLoader finishLoading={() => setIsLoading(false)} />}
-          caseFalse={<div className="app">{children}</div>}
-        />
-      </GlobalTheme>
-    </ThemeContextProvider>
+    <>
+      <Head />
+      <div className="app">
+        <ThemeContextProvider>
+          <GlobalTheme>
+            <ConditionalRenderer
+              condition={isLoading}
+              caseTrue={<AnimatedLoader finishLoading={() => setIsLoading(false)} />}
+              caseFalse={children}
+            />
+          </GlobalTheme>
+        </ThemeContextProvider>
+      </div>
+    </>
   );
 }
 

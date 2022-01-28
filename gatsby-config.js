@@ -2,11 +2,13 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.thuyhoang.hvtt',
     title: 'Thuy Hoang',
+    image: '/og.png',
     description:
       'Thuy Hoang is a software engineer who owns a passionate interest in new technologies (Web, AI, Blockchain and Metaverse).',
-    twitterUsername: 'thuyhoang_hvtt',
+    twitterUsername: '@thuyhoang_hvtt',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',

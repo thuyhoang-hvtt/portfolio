@@ -19,7 +19,7 @@ function FaceSection() {
     <StyledFace>
       <p className="heading">Hi there, I&apos;m </p>
       <p className="heading heading-lg highlight">Thuy Hoang</p>
-      <p className="heading heading-md">👻 Welcome to my cyber-world 👻</p>
+      <p className="heading heading-md">Welcome to My Metaverse 🌐👻</p>
       <ThemeToggle />
     </StyledFace>
   );
