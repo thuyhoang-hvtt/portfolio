@@ -55,7 +55,7 @@ export default createGlobalStyle`
   html {
     scrollbar-width: thin;
     scrollbar-color:
-      ${(props) => transparentize(0.4, props.theme.palette.primary)}
+      ${(props) => transparentize(0.4, props.theme.palette.onBackground)}
       ${(props) => props.theme.palette.background};
   }
   body::-webkit-scrollbar {
@@ -65,7 +65,7 @@ export default createGlobalStyle`
     background: ${(props) => props.theme.palette.background};
   }
   body::-webkit-scrollbar-thumb {
-    background-color: ${(props) => transparentize(0.4, props.theme.palette.primary)};
+    background-color: ${(props) => transparentize(0.4, props.theme.palette.onBackground)};
     border: 3px solid ${(props) => props.theme.palette.background};
     border-radius: 10px;
   }
