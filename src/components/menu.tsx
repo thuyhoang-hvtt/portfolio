@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import lodash from 'lodash';
-import { transparentize } from 'polished';
+import { lighten, transparentize } from 'polished';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import { KEY_CODES } from '@/constants';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 import { navLinks } from '@/configs';
@@ -106,8 +107,8 @@ const StyledSidebar = styled.aside`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: ${(props) => transparentize(0.3, props.theme.palette.primary)};
-    box-shadow: -10px 0px 30px -15px ${(props) => props.theme.palette.shadow};
+    background-color: ${(props) => lighten(0.2, props.theme.palette.primary)};
+    box-shadow: -10px 0px 30px -15px ${(props) => transparentize(0.85, props.theme.palette.primary)};
     z-index: 9;
     transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
     visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
@@ -240,6 +241,10 @@ function Menu() {
 
   return (
     <StyledMenu>
+      <Helmet>
+        <body className={menuOpen ? 'blur' : ''} />
+      </Helmet>
+
       <div ref={wrapperRef}>
         <StyledHamburgerButton
           ref={buttonRef}
