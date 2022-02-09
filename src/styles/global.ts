@@ -55,7 +55,7 @@ export default createGlobalStyle`
   html {
     scrollbar-width: thin;
     scrollbar-color:
-      ${(props) => props.theme.palette.onSurface}
+      ${(props) => transparentize(0.4, props.theme.palette.primary)}
       ${(props) => props.theme.palette.background};
   }
   body::-webkit-scrollbar {
@@ -65,7 +65,7 @@ export default createGlobalStyle`
     background: ${(props) => props.theme.palette.background};
   }
   body::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.palette.onSurface};
+    background-color: ${(props) => transparentize(0.4, props.theme.palette.primary)};
     border: 3px solid ${(props) => props.theme.palette.background};
     border-radius: 10px;
   }
@@ -96,10 +96,10 @@ export default createGlobalStyle`
       overflow: hidden;
 
       header {
-        background-color: transparent;
+        background-color: transparent !important;
       }
 
-      #content > * {
+      .underground > * {
         filter: blur(5px) brightness(0.7);
         transition: var(--transition);
         pointer-events: none;

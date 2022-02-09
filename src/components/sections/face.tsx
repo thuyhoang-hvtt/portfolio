@@ -5,7 +5,7 @@ import ThemeToggle from '@/components/theme-toggle';
 const StyledFace = styled.div`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
 
   display: flex;
   flex-direction: column;
