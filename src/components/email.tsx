@@ -9,15 +9,6 @@ const StyledEmail = styled.div`
   align-items: center;
   position: relative;
 
-  &:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0 auto;
-    background-color: ${({ theme }) => theme.palette.onBackground};
-  }
-
   a {
     margin: 20px auto;
     padding: 10px;

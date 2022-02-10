@@ -12,7 +12,16 @@ const StyledSideElement = styled.div`
   left: ${(props) => (props.orientation === 'left' ? '40px' : 'auto')};
   right: ${(props) => (props.orientation === 'right' ? '40px' : 'auto')};
   z-index: 10;
-  color: ${({ theme }) => theme.palette.onBackground};
+  color: ${({ theme }) => theme.palette.onSurface};
+
+  &:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: ${({ theme }) => theme.palette.onSurface};
+  }
 
   @media (max-width: 1080px) {
     left: ${(props) => (props.orientation === 'left' ? '20px' : 'auto')};

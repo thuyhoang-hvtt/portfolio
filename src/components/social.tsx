@@ -12,21 +12,12 @@ const StyledSocialList = styled.ul`
   padding: 0;
   list-style: none;
 
-  &:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0 auto;
-    background-color: ${({ theme }) => theme.palette.onBackground};
-  }
-
   li {
     &:first-of-type {
       animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
       animation-iteration-count: infinite;
       svg {
-        fill: ${({ theme }) => theme.palette.onBackground};
+        fill: ${({ theme }) => theme.palette.onSurface};
 
         &:hover {
           fill: ${({ theme }) => theme.palette.primary};
