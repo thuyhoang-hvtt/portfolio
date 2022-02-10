@@ -10,6 +10,7 @@ import { useScrollDirection } from '@/hooks/useScrollDirection';
 
 import { IconLogo } from './icons';
 import Menu from './menu';
+import ThemeToggle from './theme-toggle';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -124,6 +125,7 @@ const StyledLinks = styled.div`
 
       a {
         padding: 10px;
+        color: ${({ theme }) => theme.palette.onBackground};
 
         &:before {
           content: '0' counter(item) '.';
@@ -203,6 +205,8 @@ function Nav({ isHome }: IProps) {
     </a>
   );
 
+  const ThemeToggler = <ThemeToggle className="theme-toggle" />;
+
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <StyledNav>
@@ -249,7 +253,7 @@ function Nav({ isHome }: IProps) {
                   {isMounted && (
                     <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                       <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                        {ResumeLink}
+                        {ThemeToggler}
                       </div>
                     </CSSTransition>
                   )}
