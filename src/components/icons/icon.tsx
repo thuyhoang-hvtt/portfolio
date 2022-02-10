@@ -2,6 +2,7 @@ import React from 'react';
 import {
   IconZeroX,
   IconAppStore,
+  IconBlog,
   IconBookmark,
   IconCodepen,
   IconExternal,
@@ -14,6 +15,7 @@ import {
   IconStar,
   IconTwitter,
   IconLogo,
+  IconYoutube,
 } from '@/components/icons';
 
 interface IProps {
@@ -30,6 +32,8 @@ function Icon(props: IProps) {
       return <IconAppStore />;
     case 'Bookmark':
       return <IconBookmark />;
+    case 'Blog':
+      return <IconBlog />;
     case 'Codepen':
       return <IconCodepen />;
     case 'External':
@@ -52,6 +56,8 @@ function Icon(props: IProps) {
       return <IconTwitter />;
     case 'Logo':
       return <IconLogo />;
+    case 'Youtube':
+      return <IconYoutube />;
     default:
       return <IconExternal />;
   }

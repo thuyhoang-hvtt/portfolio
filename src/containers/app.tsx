@@ -7,6 +7,8 @@ import ConditionalRenderer from '@/components/conditional-renderer';
 import AnimatedLoader from '@/components/animated-loader';
 import Head from '@/components/head';
 import Nav from '@/components/nav';
+import Social from '@/components/social';
+import Email from '@/components/email';
 
 const StyledContent = styled.div`
   display: flex;
@@ -45,6 +47,8 @@ function App({ location, children }) {
               caseFalse={
                 <StyledContent>
                   <Nav isHome={isHome} />
+                  <Social isHome={isHome} />
+                  <Email isHome={isHome} />
                   <div className="underground">{children}</div>
                 </StyledContent>
               }
