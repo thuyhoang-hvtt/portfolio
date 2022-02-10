@@ -18,8 +18,12 @@ const StyledSocialList = styled.ul`
       animation-iteration-count: infinite;
       svg {
         fill: ${({ theme }) => theme.palette.onSurface};
+      }
 
-        &:hover {
+      &:hover {
+        animation: none;
+
+        svg {
           fill: ${({ theme }) => theme.palette.primary};
         }
       }
