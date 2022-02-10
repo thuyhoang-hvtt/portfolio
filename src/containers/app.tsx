@@ -10,12 +10,16 @@ import Nav from '@/components/nav';
 import Social from '@/components/social';
 import Email from '@/components/email';
 
-const StyledContent = styled.div`
+const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100vw;
   overflow: overlay;
+`;
+
+const StyledMain = styled.main`
+  counter-reset: section;
 `;
 
 function App({ location, children }) {
@@ -45,12 +49,12 @@ function App({ location, children }) {
               condition={isLoading}
               caseTrue={<AnimatedLoader finishLoading={() => setIsLoading(false)} />}
               caseFalse={
-                <StyledContent>
+                <StyledApp>
                   <Nav isHome={isHome} />
                   <Social isHome={isHome} />
                   <Email isHome={isHome} />
-                  <div className="underground">{children}</div>
-                </StyledContent>
+                  <StyledMain className="underground auto-padding">{children}</StyledMain>
+                </StyledApp>
               }
             />
           </GlobalTheme>

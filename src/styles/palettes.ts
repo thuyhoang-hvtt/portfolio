@@ -6,18 +6,18 @@ export const dark: IPalette = {
   primary: '#b817e3',
   secondary: '#fe5242',
   onBackground: '#fefdfd',
-  onSurface: '#fefdfd',
+  onSurface: '#cab9de',
   onPrimary: '#1d1d1d',
   onSecondary: '#1d1d1d',
 };
 
 export const light: IPalette = {
   background: '#fefdfd',
-  surface: '#3e465d',
+  surface: '#fed8b1',
   primary: '#fe5242',
   secondary: '#b817e3',
-  onBackground: '#131313',
-  onSurface: '#1d1d1d',
-  onPrimary: '#fefdfd',
-  onSecondary: '#fefdfd',
+  onBackground: '#1d1d1d',
+  onSurface: '#3e465d',
+  onPrimary: '#131313',
+  onSecondary: '#131313',
 };

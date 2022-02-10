@@ -4,11 +4,14 @@ import { ThemeMode } from '@/constants';
 import { useTheme } from '@/hooks/useTheme';
 
 interface IProps {
+  className?: string;
   width?: number;
   height?: number;
 }
 
 const Wrapper = styled.div`
+  margin-bottom: 4px;
+
   .sky {
     height: ${(props) => props.height}px;
     width: ${(props) => props.width}px;
@@ -132,11 +135,11 @@ const Wrapper = styled.div`
 `;
 
 function ThemeToggle(props: IProps) {
-  const { width = 64, height = 32 } = props;
+  const { className, width = 64, height = 32 } = props;
   const { mode, toggleTheme } = useTheme();
 
   return (
-    <Wrapper width={width} height={height}>
+    <Wrapper className={className} width={width} height={height}>
       <button
         className={`sky ${mode === ThemeMode.Dark ? 'night' : 'sun'}`}
         onClick={toggleTheme}

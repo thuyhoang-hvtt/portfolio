@@ -136,7 +136,7 @@ export default createGlobalStyle`
       padding: 125px 25px;
     }
 
-    &.fillHeight {
+    &.auto-padding {
       padding: 0 150px;
 
       @media (max-width: 1080px) {
@@ -247,6 +247,11 @@ export default createGlobalStyle`
     &:last-of-type {
       margin: 0;
     }
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
 
     & > code {
       background-color:${(props) => props.theme.palette.surface};
@@ -394,7 +399,7 @@ export default createGlobalStyle`
     font-size: clamp(24px, 3vw, 60px);
 
     &.heading-lg {
-      font-size: clamp(36px, 6vw, 96px);
+      font-size: clamp(40px, 8vw, 80px);
     }
 
     &.heading-md {
