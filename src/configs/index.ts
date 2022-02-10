@@ -19,12 +19,12 @@ export const navLinks = [
 
 export const socialMedia = [
   {
-    name: 'GitHub',
-    url: 'https://github.com/thuyhoang-hvtt',
+    name: 'Resume',
+    url: '/resume.pdf',
   },
   {
-    name: 'Youtube',
-    url: 'https://www.youtube.com',
+    name: 'GitHub',
+    url: 'https://github.com/thuyhoang-hvtt',
   },
   {
     name: 'Twitter',

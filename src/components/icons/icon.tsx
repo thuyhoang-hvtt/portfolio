@@ -16,6 +16,7 @@ import {
   IconTwitter,
   IconLogo,
   IconYoutube,
+  IconResume,
 } from '@/components/icons';
 
 interface IProps {
@@ -54,6 +55,8 @@ function Icon(props: IProps) {
       return <IconStar />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Resume':
+      return <IconResume />;
     case 'Logo':
       return <IconLogo />;
     case 'Youtube':
