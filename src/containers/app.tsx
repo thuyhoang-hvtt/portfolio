@@ -1,8 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
-import { ThemeContextProvider } from '@/contexts';
+import Layout from '@/components/layouts';
 import { navigateToSection, targetExternalLinkToNewPage } from '@/utils';
-import GlobalTheme from '@/components/layouts/theme';
 import ConditionalRenderer from '@/components/conditional-renderer';
 import AnimatedLoader from '@/components/animated-loader';
 import Head from '@/components/head';
@@ -43,22 +42,20 @@ function App({ location, children }) {
     <>
       <Head />
       <div className="app">
-        <ThemeContextProvider>
-          <GlobalTheme>
-            <ConditionalRenderer
-              condition={isLoading}
-              caseTrue={<AnimatedLoader finishLoading={() => setIsLoading(false)} />}
-              caseFalse={
-                <StyledApp>
-                  <Nav isHome={isHome} />
-                  <Social isHome={isHome} />
-                  <Email isHome={isHome} />
-                  <StyledMain className="underground auto-padding">{children}</StyledMain>
-                </StyledApp>
-              }
-            />
-          </GlobalTheme>
-        </ThemeContextProvider>
+        <Layout>
+          <ConditionalRenderer
+            condition={isLoading}
+            caseTrue={<AnimatedLoader finishLoading={() => setIsLoading(false)} />}
+            caseFalse={
+              <StyledApp>
+                <Nav isHome={isHome} />
+                <Social isHome={isHome} />
+                <Email isHome={isHome} />
+                <StyledMain className="underground auto-padding">{children}</StyledMain>
+              </StyledApp>
+            }
+          />
+        </Layout>
       </div>
     </>
   );
