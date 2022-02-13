@@ -1,53 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import Layout from '@/components/layouts';
 
-// styles
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
+const StyledMain = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
+const StyledTitle = styled.h1`
+  color: ${({ theme }) => theme.palette.primary};
+  font-family: var(--font-mono);
+  font-size: clamp(100px, 25vw, 200px);
+  line-height: 1;
+`;
 
-// markup
+const StyledSubtitle = styled.h2`
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 400;
+`;
+
+const StyledHomeButton = styled(Link)`
+  margin-top: 40px;
+`;
+
 function NotFoundPage() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsMounted(true), 100);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{' '}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{' '}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === 'development' ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <Helmet title="Page Not Found" />
+      <TransitionGroup component={null}>
+        {isMounted && (
+          <CSSTransition timeout={500} className="fadeup">
+            <StyledMain className="fillHeight">
+              <StyledTitle>404</StyledTitle>
+              <StyledSubtitle>Page Not Found</StyledSubtitle>
+              <StyledHomeButton to="/">Go Home</StyledHomeButton>
+            </StyledMain>
+          </CSSTransition>
+        )}
+      </TransitionGroup>
+    </Layout>
   );
 }
 
