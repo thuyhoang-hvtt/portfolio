@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import lodash from 'lodash';
+import lodash, { debounce, throttle } from 'lodash';
 import { lighten, transparentize } from 'polished';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
@@ -228,14 +228,16 @@ function Menu() {
   };
 
   useEffect(() => {
-    document.addEventListener('keydown', onKeyDown);
-    window.addEventListener('resize', onResize);
+    const debouncedListener = debounce(onKeyDown, 300);
+    const throttledListener = throttle(onResize, 300);
+    document.addEventListener('keydown', debouncedListener);
+    window.addEventListener('resize', throttledListener);
 
     setFocusable();
 
     return () => {
-      document.removeEventListener('keydown', onKeyDown);
-      window.removeEventListener('resize', onResize);
+      document.removeEventListener('keydown', debouncedListener);
+      window.removeEventListener('resize', throttledListener);
     };
   }, []);
 
