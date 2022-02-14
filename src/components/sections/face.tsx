@@ -112,7 +112,6 @@ function FaceSection() {
     <StyledFace>
       <ConditionalRenderer
         condition={prefersReducedMotion}
-        // eslint-disable-next-line react/jsx-no-useless-fragment
         caseTrue={
           <>
             {items.map((item, i) => (

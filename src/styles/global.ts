@@ -354,6 +354,7 @@ export default createGlobalStyle`
     width: 100%;
     font-size: clamp(26px, 5vw, var(--fz-heading));
     white-space: nowrap;
+    color: ${({ theme }) => theme.palette.onBackground};
 
     &:before {
       position: relative;
@@ -380,7 +381,7 @@ export default createGlobalStyle`
       width: 300px;
       height: 1px;
       margin-left: 20px;
-      background-color: ${(props) => props.theme.palette.surface};
+      background-color: ${(props) => props.theme.palette.onSurface};
 
       @media (max-width: 1080px) {
         width: 200px;

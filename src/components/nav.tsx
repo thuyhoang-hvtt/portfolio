@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Link } from 'gatsby';
 import { transparentize } from 'polished';
+import { throttle } from 'lodash';
 import { navLinks } from '@/configs';
 import { LOADER_DELAY } from '@/constants';
 import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
@@ -44,13 +45,8 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background: linear-gradient(
-          90deg,
-          ${({ theme }) => transparentize(0.2, theme.palette.background)} 0%,
-          ${({ theme }) => transparentize(0.8, theme.palette.background)} 98%,
-          ${({ theme }) => transparentize(1, theme.palette.background)} 100%
-        );
-        box-shadow: 0 10px 30px -10px ${({ theme }) => transparentize(0.85, theme.palette.background)};
+        background-color: ${({ theme }) => transparentize(0.85, theme.palette.background)};
+        box-shadow: 0 10px 30px -10px ${({ theme }) => theme.palette.background};
       `};
 
     ${(props) =>
@@ -167,12 +163,14 @@ function Nav({ isHome }: IProps) {
     const timeout = setTimeout(() => {
       setIsMounted(true);
     }, 100);
-    window.addEventListener('scroll', handleScroll);
+
+    const throttledListener = throttle(handleScroll, 300);
+    window.addEventListener('scroll', throttledListener);
 
     // eslint-disable-next-line consistent-return
     return () => {
       clearTimeout(timeout);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledListener);
     };
   }, []);
 

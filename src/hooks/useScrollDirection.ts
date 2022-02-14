@@ -1,3 +1,4 @@
+import { throttle } from 'lodash';
 import { useState, useEffect } from 'react';
 
 const SCROLL_UP = 'up';
@@ -29,12 +30,12 @@ export const useScrollDirection = (
       ticking = false;
     };
 
-    const onScroll = () => {
+    const onScroll = throttle(() => {
       if (!ticking) {
         window.requestAnimationFrame(updateScrollDir);
         ticking = true;
       }
-    };
+    }, 300);
 
     /**
      * Bind the scroll handler if `off` is set to false.
