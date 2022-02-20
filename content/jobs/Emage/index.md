@@ -7,7 +7,6 @@ range: 'Mar 2020 - Nov 2020'
 url: 'https://emagevisionpl.com/'
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Maintained & optimized product which supports users inspect defective components in the manufacturing industry.
+- Researched relevant studies on machine-learning based computer vision: image classification, instance segmentations, etc.
+- Built, customized and engineered several networks (Pytorch/Tensorflow) on Linux machines, entensively worked with Bash (Unix shell), GNU Screen.
