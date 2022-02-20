@@ -15,30 +15,51 @@ module.exports = {
     'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-external-links
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-images
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 700,
+              linkImagesToOriginal: true,
+              quality: 90,
+              tracedSVG: { color: '#b817e3' },
+            },
+          },
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-code-titles/
+            resolve: 'gatsby-remark-code-titles',
+          }, // IMPORTANT: this must be ahead of other plugins that use code blocks
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Thuy Hoang',
         short_name: '0xShikYe',
         start_url: '/',
-        icon: 'src/images/logo@512px.png',
+        icon: 'src/images/metaicon@512px.png',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: 'content',
+        path: `${__dirname}/content/`,
       },
-      __key: 'images',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: './src/pages/',
-      },
-      __key: 'pages',
     },
   ],
 };
