@@ -51,7 +51,7 @@ module.exports = {
         name: 'Thuy Hoang',
         short_name: '0xShikYe',
         start_url: '/',
-        icon: 'src/images/logo@512px.png',
+        icon: 'src/images/metaicon@512px.png',
       },
     },
     {
