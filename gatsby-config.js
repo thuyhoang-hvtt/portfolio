@@ -1,3 +1,9 @@
+const variables = require('dotenv');
+
+variables.config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.thuyhoang.hvtt',

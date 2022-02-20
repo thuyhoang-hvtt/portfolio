@@ -8,6 +8,7 @@ import Head from '@/components/head';
 import Nav from '@/components/nav';
 import Social from '@/components/social';
 import Email from '@/components/email';
+import Footer from '@/components/footer';
 
 const StyledApp = styled.div`
   display: flex;
@@ -52,6 +53,7 @@ function App({ location, children }) {
                 <Social isHome={isHome} />
                 <Email isHome={isHome} />
                 <StyledMain className="underground auto-padding">{children}</StyledMain>
+                <Footer />
               </StyledApp>
             }
           />
