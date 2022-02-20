@@ -18,7 +18,7 @@
     "clean": "gatsby clean",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "postinstall": "husky install"
+    "postinstall": "./bin/postinstall.sh"
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
