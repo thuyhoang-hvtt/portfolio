@@ -40,4 +40,9 @@ export const socialMedia = [
   },
 ];
 
-export const email = 'thuyhoang.hvtt@gmail.com';
+export const email = process.env.HERO_EMAIL;
+
+export const github = {
+  repo: process.env.GITHUB_REPO,
+  api: process.env.GITHUB_API,
+};
