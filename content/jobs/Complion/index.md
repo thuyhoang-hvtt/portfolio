@@ -7,7 +7,9 @@ range: 'July 2021 - Jan 2022'
 url: 'https://complion.com/'
 ---
 
-- Worked as a full-stack engineer in a Scrum team.
-- Delivered solution to support clinical researchers in staff assignment, FDA document management, which aligns with HIPAA compliance.
-- Implemented highly interactive UI/UX experiences using React (with Redux).
-- Designed and built service to handle the integration with 3rd parties using Flask and Azure Service Bus.
+- Cooperated with teammates to propose, design, implement and deliver features on time from scratch.
+- Adhered to a complex development process to deliver clean, high-quality, and testable code.
+- Worked with ReactJS, Material Table, etc to build a dashboard that manages staff’s delegations under clinical studies.
+- Served GraphQL-based APIs which were built on top of Koa.js framework.
+- Practiced with Azure Service Bus SDK to implement an adapter that was used by a Flask micro-service.
+- Upgraded notification system (backed by DynamoDB, AWS Lambda & SendGrid) to adapt to new requirements.
