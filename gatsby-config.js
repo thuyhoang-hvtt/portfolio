@@ -6,7 +6,7 @@ variables.config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.thuyhoang.hvtt',
+    siteUrl: 'https://thuyhoang.me',
     title: 'Thuy Hoang',
     image: '/og.png',
     description:
