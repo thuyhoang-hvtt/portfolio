@@ -24,6 +24,13 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-offline',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'G-VNYJ3M70BN',
+        head: true,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
