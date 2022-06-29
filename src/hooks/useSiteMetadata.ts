@@ -11,6 +11,7 @@ export const useSiteMetadata = () => {
             defaultImage: image
             siteUrl
             twitterUsername
+            verificationId
           }
         }
       }

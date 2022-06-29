@@ -12,6 +12,7 @@ module.exports = {
     description:
       'Thuy Hoang is a software engineer who owns a passionate interest in new technologies (Web, AI, Blockchain and Metaverse).',
     twitterUsername: '@thuyhoang_hvtt',
+    verificationId: '9_B44bzPb2d5j6VUJq2UecrL575AkjMZddvWUM9EB20',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

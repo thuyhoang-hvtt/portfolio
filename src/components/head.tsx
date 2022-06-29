@@ -42,10 +42,7 @@ function Head({ title, description, image }: IProps) {
       <meta property="twitter:description" content={seo.description} />
       <meta property="twitter:image" content={seo.image} />
 
-      <meta
-        property="goggle-site-verification"
-        content="UioQIr5SPeUs58q_xgGthNzwyiZMwimCtr9iVo62SHc"
-      />
+      <meta property="goggle-site-verification" content={siteMetaData.verificationId} />
     </Helmet>
   );
 }
