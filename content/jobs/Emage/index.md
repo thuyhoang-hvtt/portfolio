@@ -5,6 +5,7 @@ company: 'Emage'
 location: 'HCM City, VN'
 range: 'Mar 2020 - Nov 2020'
 url: 'https://emagevisionpl.com/'
+stack: Python, Pytorch, Keras, Tensorflow, Computer Vision
 ---
 
 - Maintained & optimized product which supports users inspect defective components in the manufacturing industry.

@@ -188,6 +188,13 @@ const StyledTabPanel = styled.div`
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
   }
+
+  .stack {
+    font-size: var(--fz-md);
+    color: ${({ theme }) => theme.palette.onSurface};
+    font-style: italic;
+    font-weight: 700;
+  }
 `;
 
 function JobsSection() {
@@ -208,6 +215,7 @@ function JobsSection() {
               title
               company
               location
+              stack
               range
               url
             }
@@ -301,7 +309,7 @@ function JobsSection() {
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+              const { title, url, company, stack, range } = frontmatter;
 
               return (
                 <CSSTransition
@@ -330,6 +338,7 @@ function JobsSection() {
 
                     <p className="range">{range}</p>
                     <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <span className="stack">Tech Stack: {stack}</span>
                   </StyledTabPanel>
                 </CSSTransition>
               );

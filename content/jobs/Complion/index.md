@@ -5,6 +5,7 @@ company: 'Complion'
 location: 'HCM City, VN'
 range: 'July 2021 - Jan 2022'
 url: 'https://complion.com/'
+stack: ReactJS, Redux-Thunk, KoaJS, GraphQL, Python, Flask, Docker, GitOps, Kustomize, K8s
 ---
 
 - Cooperated with teammates to propose, design, implement and deliver features on time from scratch.
