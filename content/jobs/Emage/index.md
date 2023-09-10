@@ -1,9 +1,9 @@
 ---
-date: '2020-03-01'
+date: '2019-03-01'
 title: 'Software Engineer'
 company: 'Emage'
 location: 'HCM City, VN'
-range: 'Mar 2020 - Nov 2020'
+range: 'Mar 2019 - Nov 2019'
 url: 'https://emagevisionpl.com/'
 stack: Python, Pytorch, Keras, Tensorflow, Computer Vision
 ---

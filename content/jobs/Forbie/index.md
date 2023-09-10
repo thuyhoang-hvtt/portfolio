@@ -1,9 +1,9 @@
 ---
-date: '2020-12-01'
+date: '2019-12-01'
 title: 'Software Engineer'
 company: 'Forbie'
 location: 'HCM City, VN'
-range: 'Dec 2020 - June 2021'
+range: 'Dec 2019 - June 2021'
 url: 'https://forbie.com/'
 stack: ReactJS, Redux-Saga, NestJS, Multi-tenant, PostgreSQL, Redis, K8s, Helm, Azure
 ---
