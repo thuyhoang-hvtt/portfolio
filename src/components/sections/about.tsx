@@ -154,10 +154,14 @@ function AboutSection() {
     'TypeScript',
     'Python 3',
     'Node.js',
+    'Java',
+    'Solidity',
+    'Hardhat',
     'React',
     'NestJS',
-    'Flask',
+    'FastAPI',
     'PyTorch',
+    'Sprint Boot',
   ];
 
   return (
@@ -166,23 +170,22 @@ function AboutSection() {
       <StyledContent>
         <StyledParagraph>
           <p>
-            Yo!! My name is Thuy and I work as a software engineer attempting to bring exceptional
-            experiences not only to customers but also to developers. Experiences from maintaining
-            more than 10 projects shows me that developer experience (DX) is obviously important on
-            the road to a successful product.
+            Yo!! This is Thuy (Lachy) and I work as a software engineer attempting to bring
+            exceptional experiences not only to customers but also to developers. Experiences from
+            maintaining more than 10 projects shows me that developer experience (DX) is obviously
+            important on the road to a successful product.
           </p>
 
           <p>
             Back to today, and I’ve had the privilege of working at{' '}
             <a href="https://emagevisionpl.com">a machine vision - machine learning system</a>,{' '}
             <a href="https://apps.apple.com/vn/app/forbie/id1522643654">a healthtech startup</a>,{' '}
-            <a href="https://complion.com">a clinical research platform</a>, and{' '}
+            <a href="https://greenphire.com">a clinical research platform</a>, and{' '}
             <a href="https://github.com/thuyhoang-hvtt">
               an open-source blockchain-based community
             </a>
             . My main focus these days is to design, architect, implement inclusive products and
-            digital experiences at <a href="https://kms-technology.com/">KMS Technology</a> for a
-            variety of clients.
+            digital experiences for a variety of clients.
           </p>
 
           <p>Here are a few technologies I’ve been working with recently:</p>

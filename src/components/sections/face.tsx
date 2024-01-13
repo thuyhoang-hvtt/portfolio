@@ -94,7 +94,7 @@ function FaceSection() {
     </p>,
     <p className="description">
       I&apos;m a software engineer specializing in building exceptional digital experiences for not
-      only customers but also developers.
+      only users but also developers.
     </p>,
     <a
       className="button button-xs resume-button"
