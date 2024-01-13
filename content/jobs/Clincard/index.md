@@ -1,7 +1,7 @@
 ---
 date: '2022-03-01'
 title: 'Software Engineer'
-company: 'Greenphire'
+company: 'Clincard'
 location: 'HCM City, VN'
 range: 'March 2022 - Jan 2023'
 url: 'https://greenphire.com'
