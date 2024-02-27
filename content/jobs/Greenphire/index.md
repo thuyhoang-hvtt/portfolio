@@ -1,5 +1,5 @@
 ---
-date: '2023-01-01'
+date: '2020-06-01'
 title: 'Data Engineer'
 company: 'Greenphire'
 location: 'HCM City, VN'

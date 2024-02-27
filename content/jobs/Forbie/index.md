@@ -1,5 +1,5 @@
 ---
-date: '2019-12-01'
+date: '2019-01-01'
 title: 'Software Engineer'
 company: 'Forbie'
 location: 'HCM City, VN'
