@@ -5,7 +5,7 @@ company: 'Avocado'
 location: 'Remote'
 range: 'March 2022 - Jan 2024'
 url: 'https://www.avocadodao.io'
-stack: Typescript, Node.js, PM2, Solidity, Hardhat, Docker, Digital Ocean, AWS
+stack: Typescript, Node.js, Subgraph, Hardhat, EVM, CI/CD, Github Action, AWS
 ---
 
 - Anticipated various of Web3 projects: GameFi, DEX, SocialFi, etc.

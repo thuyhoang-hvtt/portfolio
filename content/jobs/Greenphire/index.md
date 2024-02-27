@@ -3,9 +3,9 @@ date: '2023-01-01'
 title: 'Data Engineer'
 company: 'Greenphire'
 location: 'HCM City, VN'
-range: 'Jan 2023 - Jan 2024'
+range: 'Jun 2020 - Mar 2022'
 url: 'https://greenphire.com'
-stack: Data Connector, Debezium, Kafka, ETL, SQL Agent, MSSQL, PostgreSQL, CouchDB, Docker, AWS, FluxCD, K8s, Helm
+stack: Python, Postgres, MSSQL, Kafka, K8s, Helm, FluxCD, Github Action, AWS
 ---
 
 - Built data pipeline to stream realtime data from Postgres to various kinds of downstream.

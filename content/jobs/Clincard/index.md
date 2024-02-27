@@ -3,7 +3,7 @@ date: '2022-03-01'
 title: 'Software Engineer'
 company: 'Clincard'
 location: 'HCM City, VN'
-range: 'March 2022 - Jan 2023'
+range: 'Jan 2020 - Jun 2020'
 url: 'https://greenphire.com'
 stack: Django, Falcon, Event Sourcing, Angular, PostgreSQL, RabbitMQ, Docker, AWS, FluxCD, K8s, Helm
 ---
